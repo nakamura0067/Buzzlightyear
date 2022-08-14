@@ -1,0 +1,11 @@
+<ng-container class="buzz-list" *ngFor="let buzz of buzzList">
+  <div class="buzz-content">
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar src="assets/{{buzz.rank}}.png"/>
+        <mat-card-title>{{buzz.title}}</mat-card-title>
+        <mat-card-subtitle>{{buzz.description}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</ng-container>
