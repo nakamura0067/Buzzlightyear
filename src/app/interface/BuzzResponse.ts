@@ -1,5 +1,6 @@
 export interface BuzzResponse {
-  rank: number;
-  title: String;
-  description: String;
+  id: Number;
+  ranking: string;
+  title: string;
+  description: string;
 }
