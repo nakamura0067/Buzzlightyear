@@ -1,5 +1,6 @@
 export class Buzz {
-  rank: String;
-  title: String;
-  description: String;
+  id: Number;
+  ranking: string;
+  title: string;
+  description: string;
 }

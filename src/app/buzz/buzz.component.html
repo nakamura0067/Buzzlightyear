@@ -1,11 +1,28 @@
-<ng-container class="buzz-list" *ngFor="let buzz of buzzList">
-  <div class="buzz-content">
-    <mat-card>
-      <mat-card-header>
-        <img mat-card-avatar src="assets/{{buzz.rank}}.png"/>
-        <mat-card-title>{{buzz.title}}</mat-card-title>
-        <mat-card-subtitle>{{buzz.description}}</mat-card-subtitle>
-      </mat-card-header>
-    </mat-card>
-  </div>
+<ng-container>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Buzz Light Year {{nowDate | date:'yyyy'}}</span>
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-mini-fab color="accent" aria-label="Add Buzzlight" (click)="addBuzz()">
+            <mat-icon>add</mat-icon>
+          </button>
+          <button mat-mini-fab color="accent" aria-label="Little Buzzlight" (click)="showLittleBuzz()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <ng-container class="buzz-list" *ngFor="let buzz of buzzList">
+    <div class="buzz-content">
+      <mat-card (click)="click(buzz)">
+        <mat-card-header>
+          <img mat-card-avatar src="assets/{{buzz.ranking}}.png"/>
+          <mat-card-title>{{buzz.title}}</mat-card-title>
+          <mat-card-subtitle>{{buzz.description}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </ng-container>
 </ng-container>
